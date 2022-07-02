@@ -10,7 +10,7 @@
   width: 500px;
   border: 1px solid black;
 }
-.button-form {
+.buttonForm {
   border-radius: 30% 50% 60% 0%;
   display: block;
   padding: 10px;
@@ -23,7 +23,7 @@
   font-weight: 500;
   font-size: 15px;
 }
-.label-form {
+.labelForm {
   font-size: 20px;
   font-weight: 500;
 }

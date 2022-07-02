@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from "uuid";
 import ContactForm from "./components/ContactForm/ContactForm";
 import ContactList from "./components/ContactList/ContactList";
 import Filter from "./components/Filter/Filter";
-import "./App.css";
+import appStyles from "./App.module.css";
 class App extends React.Component {
   state = {
     contacts: [
@@ -57,9 +57,9 @@ class App extends React.Component {
     const visibleContacts = this.getVisibleContacts();
     return (
       <div>
-        <h1 className="header">Phonebook</h1>
+        <h1 className={appStyles.header}>Phonebook</h1>
         <ContactForm onSubmit={this.addContactSubmit} />
-        <h2 className="title">Contacts</h2>
+        <h2 className={appStyles.title}>Contacts</h2>
         <Filter value={filter} handleChange={this.changeFilter} />
         <ContactList
           contacts={visibleContacts}

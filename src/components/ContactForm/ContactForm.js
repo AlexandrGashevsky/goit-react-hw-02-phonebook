@@ -1,5 +1,5 @@
 import React from "react";
-import "./ContactForm.css";
+import contactFormSryles from "./ContactForm.module.css";
 class ContactForm extends React.Component {
   state = { name: "", number: "" };
   handleChange = (e) => {
@@ -20,11 +20,11 @@ class ContactForm extends React.Component {
   render() {
     const { name, number } = this.state;
     return (
-      <form className="form" onSubmit={this.handleSubmit}>
-        <label className="label-form">
+      <form className={contactFormSryles.form} onSubmit={this.handleSubmit}>
+        <label className={contactFormSryles.labelForm}>
           Name
           <input
-            className="input"
+            className={contactFormSryles.input}
             type="text"
             name="name"
             value={name}
@@ -34,10 +34,10 @@ class ContactForm extends React.Component {
             onChange={this.handleChange}
           />
         </label>
-        <label className="label-form">
+        <label className={contactFormSryles.labelForm}>
           Number
           <input
-            className="input"
+            className={contactFormSryles.input}
             type="tel"
             name="number"
             value={number}
@@ -47,7 +47,7 @@ class ContactForm extends React.Component {
             onChange={this.handleChange}
           />
         </label>
-        <button className="button-form" type="submit">
+        <button className={contactFormSryles.buttonForm} type="submit">
           Add contact
         </button>
       </form>
